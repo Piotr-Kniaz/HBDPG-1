@@ -56,8 +56,8 @@ namespace HBSPC_1
 
         private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try { System.Diagnostics.Process.Start("explorer", "https://github.com/piotr-kniaz-official/HBSPC-1"); }
-            catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/piotr-kniaz-official/HBSPC-1", "OOPS!"); }
+            try { System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBSPC-1"); }
+            catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBSPC-1", "OOPS!"); }
         }
     }
 }
