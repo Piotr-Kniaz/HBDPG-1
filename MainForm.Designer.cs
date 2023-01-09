@@ -46,7 +46,7 @@
             // showPasskeyCheckbox
             // 
             this.showPasskeyCheckbox.AutoSize = true;
-            this.showPasskeyCheckbox.Location = new System.Drawing.Point(74, 162);
+            this.showPasskeyCheckbox.Location = new System.Drawing.Point(75, 161);
             this.showPasskeyCheckbox.Name = "showPasskeyCheckbox";
             this.showPasskeyCheckbox.Size = new System.Drawing.Size(99, 19);
             this.showPasskeyCheckbox.TabIndex = 0;
@@ -57,7 +57,7 @@
             // calculateButton
             // 
             this.calculateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.calculateButton.Location = new System.Drawing.Point(254, 288);
+            this.calculateButton.Location = new System.Drawing.Point(219, 288);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(146, 53);
             this.calculateButton.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             // copyButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(430, 217);
+            this.copyButton.Location = new System.Drawing.Point(383, 217);
             this.copyButton.Name = "copyButton";
             this.copyButton.Size = new System.Drawing.Size(126, 25);
             this.copyButton.TabIndex = 2;
@@ -78,9 +78,9 @@
             // input
             // 
             this.input.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.input.Location = new System.Drawing.Point(74, 130);
+            this.input.Location = new System.Drawing.Point(75, 130);
             this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(482, 25);
+            this.input.Size = new System.Drawing.Size(434, 25);
             this.input.TabIndex = 3;
             this.input.UseSystemPasswordChar = true;
             this.input.DoubleClick += new System.EventHandler(this.Input_DoubleClick);
@@ -88,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 112);
+            this.label1.Location = new System.Drawing.Point(75, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 5;
@@ -98,7 +98,7 @@
             // 
             this.title1.AutoSize = true;
             this.title1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.title1.Location = new System.Drawing.Point(254, 9);
+            this.title1.Location = new System.Drawing.Point(226, 9);
             this.title1.Name = "title1";
             this.title1.Size = new System.Drawing.Size(146, 45);
             this.title1.TabIndex = 6;
@@ -108,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 199);
+            this.label2.Location = new System.Drawing.Point(75, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 15);
             this.label2.TabIndex = 7;
@@ -117,11 +117,11 @@
             // result
             // 
             this.result.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.result.Location = new System.Drawing.Point(74, 217);
+            this.result.Location = new System.Drawing.Point(75, 217);
             this.result.MaxLength = 32;
             this.result.Name = "result";
             this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(338, 25);
+            this.result.Size = new System.Drawing.Size(292, 25);
             this.result.TabIndex = 8;
             this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.result.Click += new System.EventHandler(this.Result_Click);
@@ -129,7 +129,7 @@
             // copyright
             // 
             this.copyright.AutoSize = true;
-            this.copyright.Location = new System.Drawing.Point(515, 410);
+            this.copyright.Location = new System.Drawing.Point(465, 407);
             this.copyright.Name = "copyright";
             this.copyright.Size = new System.Drawing.Size(107, 15);
             this.copyright.TabIndex = 9;
@@ -140,7 +140,7 @@
             // 
             this.title2.AutoSize = true;
             this.title2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.title2.Location = new System.Drawing.Point(156, 54);
+            this.title2.Location = new System.Drawing.Point(121, 54);
             this.title2.Name = "title2";
             this.title2.Size = new System.Drawing.Size(342, 20);
             this.title2.TabIndex = 10;
@@ -150,15 +150,15 @@
             // version
             // 
             this.version.AutoSize = true;
-            this.version.Location = new System.Drawing.Point(12, 410);
+            this.version.Location = new System.Drawing.Point(12, 407);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(72, 15);
             this.version.TabIndex = 11;
-            this.version.Text = "version 1.0.1";
+            this.version.Text = "version 1.0.2";
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(254, 358);
+            this.clearButton.Location = new System.Drawing.Point(219, 358);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(146, 30);
             this.clearButton.TabIndex = 12;
@@ -170,18 +170,19 @@
             // linkGitHub
             // 
             this.linkGitHub.AutoSize = true;
-            this.linkGitHub.Location = new System.Drawing.Point(12, 395);
+            this.linkGitHub.Location = new System.Drawing.Point(12, 392);
             this.linkGitHub.Name = "linkGitHub";
             this.linkGitHub.Size = new System.Drawing.Size(45, 15);
             this.linkGitHub.TabIndex = 13;
+            this.linkGitHub.TabStop = true;
             this.linkGitHub.Text = "GitHub";
             this.linkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkGitHub_LinkClicked);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 431);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(584, 431);
             this.Controls.Add(this.linkGitHub);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.version);

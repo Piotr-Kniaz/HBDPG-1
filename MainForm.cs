@@ -9,8 +9,11 @@ namespace HBSPC_1
             this.ActiveControl = input;
         }
 
-        private void ShowPasskeyCheckbox_CheckedChanged(object sender, EventArgs e) =>
+        private void ShowPasskeyCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
             input.UseSystemPasswordChar = !showPasskeyCheckbox.Checked;
+            input.Focus();
+        }
 
         private void Input_KeyDown(object? sender, KeyEventArgs e)
         {
@@ -40,21 +43,21 @@ namespace HBSPC_1
         {
             StringBuilder passkey = new();
             passkey.Append(input.Text);
-
-            StringBuilder password = GetPassword.Method1(passkey);
-            result.Text = password.ToString();
+            result.Text = GetPassword.Method1(passkey).ToString();
+            input.Focus();
         }
 
         private void Clear()
         {
             input.Text = string.Empty;
             result.Text = string.Empty;
+            input.Focus();
         }
 
         private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try { System.Diagnostics.Process.Start("explorer", "https://github.com/piotr-kniaz-official/HBSPC-1"); }
-            catch { MessageBox.Show("Unable to open link.\nProject repo: https://github.com/piotr-kniaz-official/HBSPC-1"); }
+            catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/piotr-kniaz-official/HBSPC-1", "OOPS!"); }
         }
     }
 }

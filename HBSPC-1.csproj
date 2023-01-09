@@ -8,12 +8,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>© Piotr Kniaz, 2023</Copyright>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/piotr-kniaz-official/HBSPC-1</RepositoryUrl>
   </PropertyGroup>
