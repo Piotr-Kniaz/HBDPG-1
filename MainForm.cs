@@ -8,7 +8,7 @@ namespace HBSPC_1
             ActiveControl = input;
             input.KeyDown += new KeyEventHandler(Input_KeyDown);
             FormClosed += new FormClosedEventHandler(Form_Closed);
-            ClipboardAutoClear.InitializeTimer();
+            ClipboardSecurity.InitializeTimer();
         }
 
         private void CalculateButton_Click(object sender, EventArgs e) => Calculate();
@@ -22,7 +22,7 @@ namespace HBSPC_1
                 Clipboard.SetText(result.Text);
                 result.Focus();
                 result.SelectAll();
-                ClipboardAutoClear.ResetTimer();
+                ClipboardSecurity.ResetTimer();
             }
         }
 
@@ -48,7 +48,7 @@ namespace HBSPC_1
             catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBSPC-1", "OOPS!"); }
         }
 
-        private void Form_Closed(object? sender, EventArgs e) => Clipboard.Clear();
+        private void Form_Closed(object? sender, EventArgs e) => ClipboardSecurity.Clear();
 
         private void Calculate()
         {
@@ -62,6 +62,7 @@ namespace HBSPC_1
         {
             input.Text = string.Empty;
             result.Text = string.Empty;
+            ClipboardSecurity.Clear();
             input.Focus();
         }
     }

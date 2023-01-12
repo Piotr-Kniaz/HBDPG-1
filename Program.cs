@@ -1,6 +1,5 @@
 global using System.Text;
 global using System.Security.Cryptography;
-global using System.Timers;
 
 namespace HBSPC_1
 {
