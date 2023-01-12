@@ -8,6 +8,7 @@ namespace HBSPC_1
             ActiveControl = input;
             input.KeyDown += new KeyEventHandler(Input_KeyDown);
             FormClosed += new FormClosedEventHandler(Form_Closed);
+            ClipboardAutoClear.InitializeTimer();
         }
 
         private void CalculateButton_Click(object sender, EventArgs e) => Calculate();
@@ -21,6 +22,7 @@ namespace HBSPC_1
                 Clipboard.SetText(result.Text);
                 result.Focus();
                 result.SelectAll();
+                ClipboardAutoClear.ResetTimer();
             }
         }
 
