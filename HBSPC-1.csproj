@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Copyright>© Piotr Kniaz, 2023</Copyright>
+    <Copyright>© 2023 Piotr Kniaz</Copyright>
     <AssemblyVersion>1.0.2</AssemblyVersion>
     <FileVersion>1.0.2</FileVersion>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>

@@ -129,11 +129,11 @@
             // copyright
             // 
             this.copyright.AutoSize = true;
-            this.copyright.Location = new System.Drawing.Point(465, 407);
+            this.copyright.Location = new System.Drawing.Point(468, 407);
             this.copyright.Name = "copyright";
-            this.copyright.Size = new System.Drawing.Size(107, 15);
+            this.copyright.Size = new System.Drawing.Size(104, 15);
             this.copyright.TabIndex = 9;
-            this.copyright.Text = "© Piotr Kniaz, 2023";
+            this.copyright.Text = "© 2023 Piotr Kniaz";
             this.copyright.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // title2
