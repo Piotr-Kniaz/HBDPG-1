@@ -1,4 +1,6 @@
-﻿public static class GetPassword
+﻿namespace HBSPC_1;
+
+public static class GetPassword
 {
     private static readonly MD5 md5 = MD5.Create();
     private static readonly SHA256 sha256 = SHA256.Create();
@@ -6,20 +8,23 @@
     private static readonly char[,] symbols = { { '!', '@', '#', '$', '%', '^', '&', '*', '/', ')', '[', '{', '-', '=', '<', '?', ',', ';', '`' },
                                               { '.', ',', '|', '?', '\\', ';', ':', '"', '\'', '(', ']', '}', '+', '_', '>', '^', '$', '!', '~' } };
 
-    // Pers HBSPG-1
-    public static StringBuilder Method1(StringBuilder passkey)
+    /// <summary>
+    /// Pers HBSPG-1 algorithm.
+    /// </summary>
+    /// <param name="passkey">Passkey to calculate.</param>
+    /// <returns>Calculated password.</returns>
+    public static StringBuilder HBSPC_1(StringBuilder passkey)
     {
         StringBuilder hash1 = GetHash(passkey, md5);
         StringBuilder hash2 = GetHash(passkey.Append(hash1), sha256);
-        StringBuilder hash3 = GetHash(hash1.Append(hash2), md5);
-        StringBuilder result = hash3;
+        StringBuilder result = GetHash(hash1.Append(hash2), md5);
 
         List<int> numbers = new();
         List<int> sumPairs = new();
 
         // all numbers from hash2
         foreach (char c in hash2.ToString())
-            if (Char.IsDigit(c)) numbers.Add(c - '0');
+            if (char.IsDigit(c)) numbers.Add(c - '0');
 
         numbers.Reverse();
 
@@ -41,8 +46,8 @@
         
         // insert uppercase letters
         for (int i = 0; i < result.Length; i++)
-            if (i % (2 + numbers.Sum() % 3) == 0 && Char.IsLower(result[i]))
-                result.Replace(result[i], Char.ToUpper(result[i]), i, 1);
+            if (i % (2 + numbers.Sum() % 3) == 0 && char.IsLower(result[i]))
+                result.Replace(result[i], char.ToUpper(result[i]), i, 1);
         
         if (sumPairs.Sum() % 2 == 0) Reverse(ref result);
 

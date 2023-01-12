@@ -52,7 +52,7 @@ namespace HBSPC_1
         {
             StringBuilder passkey = new();
             passkey.Append(input.Text);
-            result.Text = GetPassword.Method1(passkey).ToString();
+            result.Text = GetPassword.HBSPC_1(passkey).ToString();
             input.Focus();
         }
 
