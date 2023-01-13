@@ -52,8 +52,7 @@ namespace HBSPC_1
 
         private void Calculate()
         {
-            StringBuilder passkey = new();
-            passkey.Append(input.Text);
+            StringBuilder passkey = new(input.Text);
             result.Text = GetPassword.HBSPC_1(passkey).ToString();
             input.Focus();
         }
@@ -62,7 +61,6 @@ namespace HBSPC_1
         {
             input.Text = string.Empty;
             result.Text = string.Empty;
-            ClipboardSecurity.Clear();
             input.Focus();
         }
     }

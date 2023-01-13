@@ -140,11 +140,11 @@
             // 
             this.title2.AutoSize = true;
             this.title2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.title2.Location = new System.Drawing.Point(121, 54);
+            this.title2.Location = new System.Drawing.Point(116, 54);
             this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(342, 20);
+            this.title2.Size = new System.Drawing.Size(353, 20);
             this.title2.TabIndex = 10;
-            this.title2.Text = "(Hash-based Secure Password Calculation 1st Gen)";
+            this.title2.Text = "Hashing-based Secure Password Calculation 1st Gen";
             this.title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // version
@@ -154,7 +154,7 @@
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(72, 15);
             this.version.TabIndex = 11;
-            this.version.Text = "version 1.0.2";
+            this.version.Text = "version 1.1.0";
             // 
             // clearButton
             // 
