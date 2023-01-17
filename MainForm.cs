@@ -7,6 +7,7 @@ namespace HBSPC_1
             InitializeComponent();
             ActiveControl = input;
             input.KeyDown += new KeyEventHandler(Input_KeyDown);
+            iterationsCount.KeyDown += new KeyEventHandler(Input_KeyDown);
             FormClosed += new FormClosedEventHandler(Form_Closed);
             ClipboardSecurity.InitializeTimer();
         }
@@ -30,6 +31,7 @@ namespace HBSPC_1
         {
             if (e.KeyCode == Keys.Enter) { e.SuppressKeyPress = true; Calculate(); }
             if (e.KeyCode == Keys.Escape) { e.SuppressKeyPress = true; Clear(); }
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down) { e.SuppressKeyPress = true; iterationsCount.Focus(); }
         }
 
         private void ShowPasskeyCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -52,8 +54,14 @@ namespace HBSPC_1
 
         private void Calculate()
         {
-            StringBuilder passkey = new(input.Text);
-            result.Text = GetPassword.HBSPC_1(passkey).ToString();
+            StringBuilder result = new(input.Text);
+            int i = (int)iterationsCount.Value;
+
+            do 
+                result = GetPassword.HBSPC_1(result);
+            while (--i > 0);
+
+            this.result.Text = result.ToString();
             input.Focus();
         }
 
@@ -61,6 +69,7 @@ namespace HBSPC_1
         {
             input.Text = string.Empty;
             result.Text = string.Empty;
+            iterationsCount.Value = 1;
             input.Focus();
         }
     }
