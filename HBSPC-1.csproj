@@ -3,17 +3,17 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
-    <RootNamespace>HBSPC_1</RootNamespace>
+    <RootNamespace>HBSPC_1_WindowsApp</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>© 2023 Piotr Kniaz</Copyright>
-    <AssemblyVersion>1.1.0</AssemblyVersion>
-    <FileVersion>1.1.0</FileVersion>
+    <AssemblyVersion>1.2.0</AssemblyVersion>
+    <FileVersion>1.2.0</FileVersion>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Piotr-Kniaz/HBSPC-1</RepositoryUrl>
   </PropertyGroup>

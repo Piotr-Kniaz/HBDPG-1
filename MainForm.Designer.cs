@@ -1,33 +1,33 @@
-﻿namespace HBSPC_1
+﻿namespace HBSPC_1_WindowsApp;
+
+partial class MainForm
 {
-    partial class MainForm
+    /// <summary>
+    ///  Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    ///  Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        if (disposing && (components != null))
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
+            components.Dispose();
         }
+        base.Dispose(disposing);
+    }
 
-        #region Windows Form Designer generated code
+    #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+    /// <summary>
+    ///  Required method for Designer support - do not modify
+    ///  the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
             this.showPasskeyCheckbox = new System.Windows.Forms.CheckBox();
             this.calculateButton = new System.Windows.Forms.Button();
             this.copyButton = new System.Windows.Forms.Button();
@@ -41,6 +41,9 @@
             this.version = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.linkGitHub = new System.Windows.Forms.LinkLabel();
+            this.iterationsCount = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.iterationsCount)).BeginInit();
             this.SuspendLayout();
             // 
             // showPasskeyCheckbox
@@ -49,7 +52,7 @@
             this.showPasskeyCheckbox.Location = new System.Drawing.Point(75, 161);
             this.showPasskeyCheckbox.Name = "showPasskeyCheckbox";
             this.showPasskeyCheckbox.Size = new System.Drawing.Size(99, 19);
-            this.showPasskeyCheckbox.TabIndex = 0;
+            this.showPasskeyCheckbox.TabIndex = 2;
             this.showPasskeyCheckbox.Text = "Show passkey";
             this.showPasskeyCheckbox.UseVisualStyleBackColor = true;
             this.showPasskeyCheckbox.CheckedChanged += new System.EventHandler(this.ShowPasskeyCheckbox_CheckedChanged);
@@ -60,17 +63,17 @@
             this.calculateButton.Location = new System.Drawing.Point(219, 288);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(146, 53);
-            this.calculateButton.TabIndex = 1;
+            this.calculateButton.TabIndex = 5;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // copyButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(383, 217);
+            this.copyButton.Location = new System.Drawing.Point(379, 217);
             this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(126, 25);
-            this.copyButton.TabIndex = 2;
+            this.copyButton.Size = new System.Drawing.Size(130, 25);
+            this.copyButton.TabIndex = 3;
             this.copyButton.Text = "Copy to clipboard";
             this.copyButton.UseVisualStyleBackColor = true;
             this.copyButton.Click += new System.EventHandler(this.CopyButton_Click);
@@ -80,8 +83,8 @@
             this.input.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.input.Location = new System.Drawing.Point(75, 130);
             this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(434, 25);
-            this.input.TabIndex = 3;
+            this.input.Size = new System.Drawing.Size(360, 25);
+            this.input.TabIndex = 0;
             this.input.UseSystemPasswordChar = true;
             this.input.DoubleClick += new System.EventHandler(this.Input_DoubleClick);
             // 
@@ -121,8 +124,8 @@
             this.result.MaxLength = 32;
             this.result.Name = "result";
             this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(292, 25);
-            this.result.TabIndex = 8;
+            this.result.Size = new System.Drawing.Size(290, 25);
+            this.result.TabIndex = 4;
             this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.result.Click += new System.EventHandler(this.Result_Click);
             // 
@@ -154,14 +157,14 @@
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(72, 15);
             this.version.TabIndex = 11;
-            this.version.Text = "version 1.1.0";
+            this.version.Text = "version 1.2.0";
             // 
             // clearButton
             // 
             this.clearButton.Location = new System.Drawing.Point(219, 358);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(146, 30);
-            this.clearButton.TabIndex = 12;
+            this.clearButton.TabIndex = 6;
             this.clearButton.Text = "Clear";
             this.clearButton.UseCompatibleTextRendering = true;
             this.clearButton.UseVisualStyleBackColor = true;
@@ -173,16 +176,50 @@
             this.linkGitHub.Location = new System.Drawing.Point(12, 392);
             this.linkGitHub.Name = "linkGitHub";
             this.linkGitHub.Size = new System.Drawing.Size(45, 15);
-            this.linkGitHub.TabIndex = 13;
+            this.linkGitHub.TabIndex = 7;
             this.linkGitHub.TabStop = true;
             this.linkGitHub.Text = "GitHub";
             this.linkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkGitHub_LinkClicked);
+            // 
+            // iterationsCount
+            // 
+            this.iterationsCount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iterationsCount.Location = new System.Drawing.Point(449, 130);
+            this.iterationsCount.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.iterationsCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.iterationsCount.Name = "iterationsCount";
+            this.iterationsCount.Size = new System.Drawing.Size(60, 25);
+            this.iterationsCount.TabIndex = 1;
+            this.iterationsCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(449, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Iterations:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(584, 431);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.iterationsCount);
             this.Controls.Add(this.linkGitHub);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.version);
@@ -198,30 +235,31 @@
             this.Controls.Add(this.showPasskeyCheckbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pers HBSPC-1";
+            ((System.ComponentModel.ISupportInitialize)(this.iterationsCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        #endregion
-
-        private CheckBox showPasskeyCheckbox;
-        private Button calculateButton;
-        private Button copyButton;
-        private TextBox input;
-        private Label label1;
-        private Label title1;
-        private Label label2;
-        private TextBox result;
-        private Label copyright;
-        private Label title2;
-        private Label version;
-        private Button clearButton;
-        private LinkLabel linkGitHub;
     }
+
+    #endregion
+
+    private CheckBox showPasskeyCheckbox;
+    private Button calculateButton;
+    private Button copyButton;
+    private TextBox input;
+    private Label label1;
+    private Label title1;
+    private Label label2;
+    private TextBox result;
+    private Label copyright;
+    private Label title2;
+    private Label version;
+    private Button clearButton;
+    private LinkLabel linkGitHub;
+    private NumericUpDown iterationsCount;
+    private Label label3;
 }

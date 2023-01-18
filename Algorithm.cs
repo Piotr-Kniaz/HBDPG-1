@@ -1,6 +1,6 @@
-﻿namespace HBSPC_1;
+﻿namespace HBSPC_1_WindowsApp;
 
-public static class GetPassword
+public static class HBSPC_1
 {
     private static readonly MD5 md5 = MD5.Create();
     private static readonly SHA256 sha256 = SHA256.Create();
@@ -13,7 +13,7 @@ public static class GetPassword
     /// </summary>
     /// <param name="passkey">Passkey to calculate.</param>
     /// <returns>Calculated password.</returns>
-    public static StringBuilder HBSPC_1(StringBuilder passkey)
+    public static StringBuilder CalculatePassword(StringBuilder passkey)
     {
         StringBuilder hash1 = GetHash(passkey, md5);
         StringBuilder hash2 = GetHash(passkey.Append(hash1), sha256);
