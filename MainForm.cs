@@ -14,7 +14,8 @@ public partial class MainForm : Form
 
         input.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         iterationsCount.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
-
+        showPasskeyCheckbox.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
+        
         FormClosed += new FormClosedEventHandler(Form_Closed);
     }
 
@@ -66,6 +67,14 @@ public partial class MainForm : Form
 
     private void KeyDown_EventProcessor(object? sender, KeyEventArgs e)
     {
+        // Only for CheckBox.
+        if (sender is CheckBox && e.KeyCode == Keys.Enter)
+        {
+            e.SuppressKeyPress = true;
+            showPasskeyCheckbox.Checked = !showPasskeyCheckbox.Checked;
+            return;
+        }
+
         switch (e.KeyCode)
         {
             case Keys.Enter:
@@ -84,15 +93,11 @@ public partial class MainForm : Form
             {
                 case Keys.Up:
                     e.SuppressKeyPress = true;
-                    iterationsCount.Focus();
-                    if (iterationsCount.Value < iterationsCount.Maximum)
-                        iterationsCount.Value++;
+                    iterationsCount.UpButton();
                     break;
                 case Keys.Down:
                     e.SuppressKeyPress = true;
-                    iterationsCount.Focus();
-                    if (iterationsCount.Value > iterationsCount.Minimum)
-                        iterationsCount.Value--;
+                    iterationsCount.DownButton();
                     break;
             }
         }

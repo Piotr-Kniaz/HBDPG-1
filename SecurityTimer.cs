@@ -15,5 +15,9 @@ public class SecurityTimer
 
     public void Stop() => timer.Stop();
 
-    public void Reset() { timer.Stop(); timer.Start(); }
+    public void Reset()
+    {
+        timer.Stop();
+        timer.Start();
+    }
 }
