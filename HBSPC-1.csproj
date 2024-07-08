@@ -2,24 +2,37 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <RootNamespace>HBSPC_1_WindowsApp</RootNamespace>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>HBDPG_1_WindowsApp</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Copyright>© 2023 Piotr Kniaz</Copyright>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
-    <FileVersion>1.2.0</FileVersion>
-    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <Copyright>© 2023-2024 Piotr Kniaz</Copyright>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <Version>1.2.0</Version>
+    <Version>2.0.0</Version>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/Piotr-Kniaz/HBSPC-1</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Piotr-Kniaz/HBDPG-1</RepositoryUrl>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

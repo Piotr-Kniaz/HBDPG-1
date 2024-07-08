@@ -28,221 +28,212 @@ partial class MainForm
     /// </summary>
     private void InitializeComponent()
     {
-            this.showPasskeyCheckbox = new System.Windows.Forms.CheckBox();
-            this.calculateButton = new System.Windows.Forms.Button();
-            this.copyButton = new System.Windows.Forms.Button();
-            this.input = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.title1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.result = new System.Windows.Forms.TextBox();
-            this.copyright = new System.Windows.Forms.Label();
-            this.title2 = new System.Windows.Forms.Label();
-            this.version = new System.Windows.Forms.Label();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.linkGitHub = new System.Windows.Forms.LinkLabel();
-            this.iterationsCount = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.iterationsCount)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // showPasskeyCheckbox
-            // 
-            this.showPasskeyCheckbox.AutoSize = true;
-            this.showPasskeyCheckbox.Location = new System.Drawing.Point(75, 161);
-            this.showPasskeyCheckbox.Name = "showPasskeyCheckbox";
-            this.showPasskeyCheckbox.Size = new System.Drawing.Size(99, 19);
-            this.showPasskeyCheckbox.TabIndex = 2;
-            this.showPasskeyCheckbox.Text = "Show passkey";
-            this.showPasskeyCheckbox.UseVisualStyleBackColor = true;
-            this.showPasskeyCheckbox.CheckedChanged += new System.EventHandler(this.ShowPasskeyCheckbox_CheckedChanged);
-            // 
-            // calculateButton
-            // 
-            this.calculateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.calculateButton.Location = new System.Drawing.Point(219, 288);
-            this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(146, 53);
-            this.calculateButton.TabIndex = 5;
-            this.calculateButton.Text = "Calculate";
-            this.calculateButton.UseVisualStyleBackColor = true;
-            this.calculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
-            // 
-            // copyButton
-            // 
-            this.copyButton.Location = new System.Drawing.Point(379, 217);
-            this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(130, 25);
-            this.copyButton.TabIndex = 3;
-            this.copyButton.Text = "Copy to clipboard";
-            this.copyButton.UseVisualStyleBackColor = true;
-            this.copyButton.Click += new System.EventHandler(this.CopyButton_Click);
-            // 
-            // input
-            // 
-            this.input.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.input.Location = new System.Drawing.Point(75, 130);
-            this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(360, 25);
-            this.input.TabIndex = 0;
-            this.input.UseSystemPasswordChar = true;
-            this.input.DoubleClick += new System.EventHandler(this.Input_DoubleClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Passkey:";
-            // 
-            // title1
-            // 
-            this.title1.AutoSize = true;
-            this.title1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.title1.Location = new System.Drawing.Point(226, 9);
-            this.title1.Name = "title1";
-            this.title1.Size = new System.Drawing.Size(146, 45);
-            this.title1.TabIndex = 6;
-            this.title1.Text = "HBSPC-1";
-            this.title1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Your password:";
-            // 
-            // result
-            // 
-            this.result.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.result.Location = new System.Drawing.Point(75, 217);
-            this.result.MaxLength = 32;
-            this.result.Name = "result";
-            this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(290, 25);
-            this.result.TabIndex = 4;
-            this.result.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.result.Click += new System.EventHandler(this.Result_Click);
-            // 
-            // copyright
-            // 
-            this.copyright.AutoSize = true;
-            this.copyright.Location = new System.Drawing.Point(468, 407);
-            this.copyright.Name = "copyright";
-            this.copyright.Size = new System.Drawing.Size(104, 15);
-            this.copyright.TabIndex = 9;
-            this.copyright.Text = "© 2023 Piotr Kniaz";
-            this.copyright.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // title2
-            // 
-            this.title2.AutoSize = true;
-            this.title2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.title2.Location = new System.Drawing.Point(116, 54);
-            this.title2.Name = "title2";
-            this.title2.Size = new System.Drawing.Size(353, 20);
-            this.title2.TabIndex = 10;
-            this.title2.Text = "Hashing-based Secure Password Calculation 1st Gen";
-            this.title2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // version
-            // 
-            this.version.AutoSize = true;
-            this.version.Location = new System.Drawing.Point(12, 407);
-            this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(72, 15);
-            this.version.TabIndex = 11;
-            this.version.Text = "version 1.2.0";
-            // 
-            // clearButton
-            // 
-            this.clearButton.Location = new System.Drawing.Point(219, 358);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(146, 30);
-            this.clearButton.TabIndex = 6;
-            this.clearButton.Text = "Clear";
-            this.clearButton.UseCompatibleTextRendering = true;
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            // 
-            // linkGitHub
-            // 
-            this.linkGitHub.AutoSize = true;
-            this.linkGitHub.Location = new System.Drawing.Point(12, 392);
-            this.linkGitHub.Name = "linkGitHub";
-            this.linkGitHub.Size = new System.Drawing.Size(45, 15);
-            this.linkGitHub.TabIndex = 7;
-            this.linkGitHub.TabStop = true;
-            this.linkGitHub.Text = "GitHub";
-            this.linkGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkGitHub_LinkClicked);
-            // 
-            // iterationsCount
-            // 
-            this.iterationsCount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.iterationsCount.Location = new System.Drawing.Point(449, 130);
-            this.iterationsCount.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.iterationsCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.iterationsCount.Name = "iterationsCount";
-            this.iterationsCount.Size = new System.Drawing.Size(60, 25);
-            this.iterationsCount.TabIndex = 1;
-            this.iterationsCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(449, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 15);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Iterations:";
-            // 
-            // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(584, 431);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.iterationsCount);
-            this.Controls.Add(this.linkGitHub);
-            this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.version);
-            this.Controls.Add(this.title2);
-            this.Controls.Add(this.copyright);
-            this.Controls.Add(this.result);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.title1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.input);
-            this.Controls.Add(this.copyButton);
-            this.Controls.Add(this.calculateButton);
-            this.Controls.Add(this.showPasskeyCheckbox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "MainForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pers HBSPC-1";
-            ((System.ComponentModel.ISupportInitialize)(this.iterationsCount)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+        showPasskeyCheckbox = new CheckBox();
+        calculateButton = new Button();
+        copyButton = new Button();
+        input = new TextBox();
+        label1 = new Label();
+        label2 = new Label();
+        result = new TextBox();
+        copyright = new Label();
+        version = new Label();
+        clearButton = new Button();
+        linkGitHub = new LinkLabel();
+        iterationsCount = new NumericUpDown();
+        label3 = new Label();
+        showPasswordCheckbox = new CheckBox();
+        pictureBox1 = new PictureBox();
+        ((System.ComponentModel.ISupportInitialize)iterationsCount).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+        SuspendLayout();
+        // 
+        // showPasskeyCheckbox
+        // 
+        showPasskeyCheckbox.AutoSize = true;
+        showPasskeyCheckbox.Location = new Point(75, 169);
+        showPasskeyCheckbox.Name = "showPasskeyCheckbox";
+        showPasskeyCheckbox.Size = new Size(99, 19);
+        showPasskeyCheckbox.TabIndex = 2;
+        showPasskeyCheckbox.Text = "Show passkey";
+        showPasskeyCheckbox.UseVisualStyleBackColor = true;
+        showPasskeyCheckbox.CheckedChanged += ShowPasskeyCheckbox_CheckedChanged;
+        // 
+        // calculateButton
+        // 
+        calculateButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+        calculateButton.Location = new Point(219, 288);
+        calculateButton.Name = "calculateButton";
+        calculateButton.Size = new Size(146, 53);
+        calculateButton.TabIndex = 5;
+        calculateButton.Text = "Calculate";
+        calculateButton.UseVisualStyleBackColor = true;
+        calculateButton.Click += CalculateButton_Click;
+        // 
+        // copyButton
+        // 
+        copyButton.Location = new Point(379, 225);
+        copyButton.Name = "copyButton";
+        copyButton.Size = new Size(130, 25);
+        copyButton.TabIndex = 3;
+        copyButton.Text = "Copy to clipboard";
+        copyButton.UseVisualStyleBackColor = true;
+        copyButton.Click += CopyButton_Click;
+        // 
+        // input
+        // 
+        input.Font = new Font("Consolas", 11F);
+        input.Location = new Point(75, 138);
+        input.Name = "input";
+        input.Size = new Size(360, 25);
+        input.TabIndex = 0;
+        input.UseSystemPasswordChar = true;
+        input.DoubleClick += Input_DoubleClick;
+        // 
+        // label1
+        // 
+        label1.AutoSize = true;
+        label1.Location = new Point(75, 120);
+        label1.Name = "label1";
+        label1.Size = new Size(51, 15);
+        label1.TabIndex = 5;
+        label1.Text = "Passkey:";
+        // 
+        // label2
+        // 
+        label2.AutoSize = true;
+        label2.Location = new Point(75, 207);
+        label2.Name = "label2";
+        label2.Size = new Size(87, 15);
+        label2.TabIndex = 7;
+        label2.Text = "Your password:";
+        // 
+        // result
+        // 
+        result.Font = new Font("Consolas", 11F);
+        result.Location = new Point(75, 225);
+        result.MaxLength = 32;
+        result.Name = "result";
+        result.ReadOnly = true;
+        result.Size = new Size(290, 25);
+        result.TabIndex = 4;
+        result.TextAlign = HorizontalAlignment.Center;
+        result.UseSystemPasswordChar = true;
+        result.Click += Result_Click;
+        // 
+        // copyright
+        // 
+        copyright.AutoSize = true;
+        copyright.Location = new Point(439, 407);
+        copyright.Name = "copyright";
+        copyright.Size = new Size(133, 15);
+        copyright.TabIndex = 9;
+        copyright.Text = "© 2023-2024 Piotr Kniaz";
+        copyright.TextAlign = ContentAlignment.TopRight;
+        // 
+        // version
+        // 
+        version.AutoSize = true;
+        version.Location = new Point(12, 407);
+        version.Name = "version";
+        version.Size = new Size(100, 15);
+        version.TabIndex = 11;
+        version.Text = "version 2.0.0 (pre)";
+        // 
+        // clearButton
+        // 
+        clearButton.Location = new Point(219, 358);
+        clearButton.Name = "clearButton";
+        clearButton.Size = new Size(146, 30);
+        clearButton.TabIndex = 6;
+        clearButton.Text = "Clear";
+        clearButton.UseCompatibleTextRendering = true;
+        clearButton.UseVisualStyleBackColor = true;
+        clearButton.Click += ClearButton_Click;
+        // 
+        // linkGitHub
+        // 
+        linkGitHub.AutoSize = true;
+        linkGitHub.Location = new Point(12, 392);
+        linkGitHub.Name = "linkGitHub";
+        linkGitHub.Size = new Size(45, 15);
+        linkGitHub.TabIndex = 7;
+        linkGitHub.TabStop = true;
+        linkGitHub.Text = "GitHub";
+        linkGitHub.LinkClicked += LinkGitHub_LinkClicked;
+        // 
+        // iterationsCount
+        // 
+        iterationsCount.Font = new Font("Segoe UI", 10F);
+        iterationsCount.Location = new Point(449, 138);
+        iterationsCount.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+        iterationsCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+        iterationsCount.Name = "iterationsCount";
+        iterationsCount.Size = new Size(60, 25);
+        iterationsCount.TabIndex = 1;
+        iterationsCount.Value = new decimal(new int[] { 1, 0, 0, 0 });
+        // 
+        // label3
+        // 
+        label3.AutoSize = true;
+        label3.Location = new Point(449, 120);
+        label3.Name = "label3";
+        label3.Size = new Size(59, 15);
+        label3.TabIndex = 15;
+        label3.Text = "Iterations:";
+        // 
+        // showPasswordCheckbox
+        // 
+        showPasswordCheckbox.AutoSize = true;
+        showPasswordCheckbox.Location = new Point(75, 256);
+        showPasswordCheckbox.Name = "showPasswordCheckbox";
+        showPasswordCheckbox.Size = new Size(108, 19);
+        showPasswordCheckbox.TabIndex = 16;
+        showPasswordCheckbox.Text = "Show password";
+        showPasswordCheckbox.UseVisualStyleBackColor = true;
+        showPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
+        // 
+        // pictureBox1
+        // 
+        pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+        pictureBox1.Location = new Point(242, 10);
+        pictureBox1.Name = "pictureBox1";
+        pictureBox1.Size = new Size(100, 100);
+        pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        pictureBox1.TabIndex = 17;
+        pictureBox1.TabStop = false;
+        pictureBox1.Click += PictureBox1_Click;
+        // 
+        // MainForm
+        // 
+        AutoScaleDimensions = new SizeF(96F, 96F);
+        AutoScaleMode = AutoScaleMode.Dpi;
+        ClientSize = new Size(584, 431);
+        Controls.Add(pictureBox1);
+        Controls.Add(showPasswordCheckbox);
+        Controls.Add(label3);
+        Controls.Add(iterationsCount);
+        Controls.Add(linkGitHub);
+        Controls.Add(clearButton);
+        Controls.Add(version);
+        Controls.Add(copyright);
+        Controls.Add(result);
+        Controls.Add(label2);
+        Controls.Add(label1);
+        Controls.Add(input);
+        Controls.Add(copyButton);
+        Controls.Add(calculateButton);
+        Controls.Add(showPasskeyCheckbox);
+        FormBorderStyle = FormBorderStyle.FixedSingle;
+        MaximizeBox = false;
+        Name = "MainForm";
+        ShowIcon = false;
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "HBDPG-1 (HBSPC-1)";
+        ((System.ComponentModel.ISupportInitialize)iterationsCount).EndInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+        ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
@@ -252,14 +243,14 @@ partial class MainForm
     private Button copyButton;
     private TextBox input;
     private Label label1;
-    private Label title1;
     private Label label2;
     private TextBox result;
     private Label copyright;
-    private Label title2;
     private Label version;
     private Button clearButton;
     private LinkLabel linkGitHub;
     private NumericUpDown iterationsCount;
     private Label label3;
+    private CheckBox showPasswordCheckbox;
+    private PictureBox pictureBox1;
 }

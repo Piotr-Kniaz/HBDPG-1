@@ -15,7 +15,7 @@ public partial class MainForm : Form
         input.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         iterationsCount.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         showPasskeyCheckbox.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
-        
+
         FormClosed += new FormClosedEventHandler(Form_Closed);
     }
 
@@ -54,11 +54,19 @@ public partial class MainForm : Form
         input.UseSystemPasswordChar = !showPasskeyCheckbox.Checked;
         input.Focus();
     }
-
+    private void ShowPasswordCheckbox_CheckedChanged(object sender, EventArgs e)
+    {
+        result.UseSystemPasswordChar = !showPasswordCheckbox.Checked;
+        input.Focus();
+    }
+    private void PictureBox1_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show("Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"", "HBDPG-1");
+    }
     private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {
-        try { System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBSPC-1"); }
-        catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBSPC-1", "OOPS!"); }
+        try { System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBDPG-1"); }
+        catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBDPG-1", "OOPS!"); }
     }
 
     #endregion
