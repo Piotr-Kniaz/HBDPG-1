@@ -1,4 +1,4 @@
-namespace HBSPC_1_WindowsApp;
+namespace HBDPG_1_WindowsApp;
 
 public partial class MainForm : Form
 {
@@ -25,7 +25,7 @@ public partial class MainForm : Form
         int iterations = (int)iterationsCount.Value;
 
         do
-            temp = HBSPC_1.CalculatePassword(temp);
+            temp = HBDPG_1.CalculatePassword(temp);
         while (--iterations > 0);
 
         result.Text = temp.ToString();
@@ -61,7 +61,7 @@ public partial class MainForm : Form
     }
     private void PictureBox1_Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"", "HBDPG-1");
+        MessageBox.Show("Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"", "Note");
     }
     private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {

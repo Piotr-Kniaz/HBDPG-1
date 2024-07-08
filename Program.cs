@@ -1,7 +1,7 @@
 global using System.Text;
 global using System.Security.Cryptography;
 
-namespace HBSPC_1_WindowsApp;
+namespace HBDPG_1_WindowsApp;
 
 internal static class Program
 {

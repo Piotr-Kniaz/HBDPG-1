@@ -1,4 +1,4 @@
-﻿namespace HBSPC_1_WindowsApp;
+﻿namespace HBDPG_1_WindowsApp;
 
 partial class MainForm
 {

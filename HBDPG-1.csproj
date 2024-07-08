@@ -14,6 +14,8 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Piotr-Kniaz/HBDPG-1</RepositoryUrl>
     <Nullable>enable</Nullable>
+    <Description>Hashing-based deterministic password generator</Description>
+	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>
