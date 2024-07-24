@@ -43,10 +43,10 @@ public partial class MainForm : Form
         if (result.Text.Length > 0)
         {
             Clipboard.SetText(result.Text);
-            result.Focus();
-            result.SelectAll();
             clipboardTimer.Reset();
         }
+
+        input.Focus();
     }
 
     private void ShowPasskeyCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -59,7 +59,7 @@ public partial class MainForm : Form
         result.UseSystemPasswordChar = !showPasswordCheckbox.Checked;
         input.Focus();
     }
-    private void PictureBox1_Click(object sender, EventArgs e)
+    private void Logo_Click(object sender, EventArgs e)
     {
         MessageBox.Show("Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"", "Note");
     }
@@ -76,6 +76,7 @@ public partial class MainForm : Form
     private void KeyDown_EventProcessor(object? sender, KeyEventArgs e)
     {
         // Only for CheckBox.
+        // TODO: for password checkbox
         if (sender is CheckBox && e.KeyCode == Keys.Enter)
         {
             e.SuppressKeyPress = true;
@@ -112,8 +113,6 @@ public partial class MainForm : Form
     }
 
     private void Input_DoubleClick(object sender, EventArgs e) => input.SelectAll();
-
-    private void Result_Click(object sender, EventArgs e) => result.SelectAll();
 
     #endregion
 
