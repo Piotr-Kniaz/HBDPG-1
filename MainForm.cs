@@ -45,6 +45,12 @@ public partial class MainForm : Form
         {
             Clipboard.SetText(result.Text);
             clipboardTimer.Reset();
+
+            MessageBox.Show(
+                "Password copied to clipboard.\n\nClipboard will be automatically cleared in 60 seconds or immediately after closing the app.",
+                "Information",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         input.Focus();
@@ -55,19 +61,36 @@ public partial class MainForm : Form
         input.UseSystemPasswordChar = !showPasskeyCheckbox.Checked;
         input.Focus();
     }
+
     private void ShowPasswordCheckbox_CheckedChanged(object sender, EventArgs e)
     {
         result.UseSystemPasswordChar = !showPasswordCheckbox.Checked;
         input.Focus();
     }
+
     private void Logo_Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"", "Note");
+        MessageBox.Show(
+            "Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"",
+            "Note",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
     }
+
     private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {
-        try { System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBDPG-1"); }
-        catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBDPG-1", "OOPS!"); }
+        try
+        {
+            System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBDPG-1");
+        }
+        catch
+        {
+            MessageBox.Show(
+                "Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBDPG-1",
+                "OOPS!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
 
         input.Focus();
     }

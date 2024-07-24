@@ -59,17 +59,6 @@ partial class MainForm
         showPasskeyCheckbox.UseVisualStyleBackColor = true;
         showPasskeyCheckbox.CheckedChanged += ShowPasskeyCheckbox_CheckedChanged;
         // 
-        // showPasswordCheckbox
-        // 
-        showPasswordCheckbox.AutoSize = true;
-        showPasswordCheckbox.Location = new Point(75, 256);
-        showPasswordCheckbox.Name = "showPasswordCheckbox";
-        showPasswordCheckbox.Size = new Size(108, 19);
-        showPasswordCheckbox.TabIndex = 5;
-        showPasswordCheckbox.Text = "Show password";
-        showPasswordCheckbox.UseVisualStyleBackColor = true;
-        showPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
-        // 
         // calculateButton
         // 
         calculateButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
@@ -193,6 +182,17 @@ partial class MainForm
         label3.Size = new Size(59, 15);
         label3.TabIndex = 6;
         label3.Text = "Iterations:";
+        // 
+        // showPasswordCheckbox
+        // 
+        showPasswordCheckbox.AutoSize = true;
+        showPasswordCheckbox.Location = new Point(75, 256);
+        showPasswordCheckbox.Name = "showPasswordCheckbox";
+        showPasswordCheckbox.Size = new Size(108, 19);
+        showPasswordCheckbox.TabIndex = 5;
+        showPasswordCheckbox.Text = "Show password";
+        showPasswordCheckbox.UseVisualStyleBackColor = true;
+        showPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
         // 
         // logo
         // 
