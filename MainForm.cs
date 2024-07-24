@@ -15,6 +15,7 @@ public partial class MainForm : Form
         input.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         iterationsCount.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         showPasskeyCheckbox.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
+        showPasswordCheckbox.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
 
         FormClosed += new FormClosedEventHandler(Form_Closed);
     }
@@ -67,6 +68,8 @@ public partial class MainForm : Form
     {
         try { System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBDPG-1"); }
         catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBDPG-1", "OOPS!"); }
+
+        input.Focus();
     }
 
     #endregion
@@ -75,12 +78,11 @@ public partial class MainForm : Form
 
     private void KeyDown_EventProcessor(object? sender, KeyEventArgs e)
     {
-        // Only for CheckBox.
-        // TODO: for password checkbox
-        if (sender is CheckBox && e.KeyCode == Keys.Enter)
+        // Only for CheckBoxes.
+        if (sender is CheckBox c && e.KeyCode == Keys.Enter)
         {
             e.SuppressKeyPress = true;
-            showPasskeyCheckbox.Checked = !showPasskeyCheckbox.Checked;
+            c.Checked = !c.Checked;
             return;
         }
 
