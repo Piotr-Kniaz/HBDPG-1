@@ -48,7 +48,7 @@ public partial class MainForm : Form
 
     #region Main GUI features
 
-    private void CalculateButton_Click(object sender, EventArgs e) => Calculate();
+    private void GenerateButton_Click(object sender, EventArgs e) => Calculate();
 
     private void ClearButton_Click(object? sender, EventArgs e) => ClearTextBoxes();
 
