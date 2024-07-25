@@ -33,53 +33,51 @@ partial class MainForm
         calculateButton = new Button();
         copyButton = new Button();
         input = new TextBox();
-        label1 = new Label();
-        label2 = new Label();
+        label1Input = new Label();
+        label3Result = new Label();
         result = new TextBox();
         copyright = new Label();
         version = new Label();
         clearButton = new Button();
         linkGitHub = new LinkLabel();
         iterationsCount = new NumericUpDown();
-        label3 = new Label();
+        label2Iterations = new Label();
         showPasswordCheckbox = new CheckBox();
         logo = new PictureBox();
+        label4Entropy = new Label();
+        entropyCount = new Label();
         ((System.ComponentModel.ISupportInitialize)iterationsCount).BeginInit();
         ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
         SuspendLayout();
         // 
-        // showPasskeyCheckbox
+        // logo
         // 
-        showPasskeyCheckbox.AutoSize = true;
-        showPasskeyCheckbox.Location = new Point(75, 172);
-        showPasskeyCheckbox.Name = "showPasskeyCheckbox";
-        showPasskeyCheckbox.Size = new Size(99, 19);
-        showPasskeyCheckbox.TabIndex = 2;
-        showPasskeyCheckbox.Text = "Show passkey";
-        showPasskeyCheckbox.UseVisualStyleBackColor = true;
-        showPasskeyCheckbox.CheckedChanged += ShowPasskeyCheckbox_CheckedChanged;
+        logo.ErrorImage = null;
+        logo.Image = (Image)resources.GetObject("logo.Image");
+        logo.InitialImage = null;
+        logo.Location = new Point(142, 10);
+        logo.Name = "logo";
+        logo.Size = new Size(300, 110);
+        logo.TabIndex = 0;
+        logo.SizeMode = PictureBoxSizeMode.Zoom;
         // 
-        // calculateButton
+        // label1Input
         // 
-        calculateButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-        calculateButton.Location = new Point(219, 291);
-        calculateButton.Name = "calculateButton";
-        calculateButton.Size = new Size(146, 53);
-        calculateButton.TabIndex = 6;
-        calculateButton.Text = "Calculate";
-        calculateButton.UseVisualStyleBackColor = true;
-        calculateButton.Click += CalculateButton_Click;
+        label1Input.AutoSize = true;
+        label1Input.Location = new Point(75, 123);
+        label1Input.Name = "label1Input";
+        label1Input.Size = new Size(51, 15);
+        label1Input.TabIndex = 1;
+        label1Input.Text = "Passkey:";
         // 
-        // copyButton
+        // label2Iterations
         // 
-        copyButton.Enabled = false;
-        copyButton.Location = new Point(379, 228);
-        copyButton.Name = "copyButton";
-        copyButton.Size = new Size(130, 25);
-        copyButton.TabIndex = 4;
-        copyButton.Text = "Copy to clipboard";
-        copyButton.UseVisualStyleBackColor = true;
-        copyButton.Click += CopyButton_Click;
+        label2Iterations.AutoSize = true;
+        label2Iterations.Location = new Point(449, 123);
+        label2Iterations.Name = "label2Iterations";
+        label2Iterations.Size = new Size(59, 15);
+        label2Iterations.TabIndex = 2;
+        label2Iterations.Text = "Iterations:";
         // 
         // input
         // 
@@ -87,27 +85,40 @@ partial class MainForm
         input.Location = new Point(75, 141);
         input.Name = "input";
         input.Size = new Size(360, 25);
-        input.TabIndex = 0;
+        input.TabIndex = 3;
         input.UseSystemPasswordChar = true;
         input.DoubleClick += Input_DoubleClick;
         // 
-        // label1
+        // iterationsCount
         // 
-        label1.AutoSize = true;
-        label1.Location = new Point(75, 123);
-        label1.Name = "label1";
-        label1.Size = new Size(51, 15);
-        label1.TabIndex = 13;
-        label1.Text = "Passkey:";
+        iterationsCount.Font = new Font("Segoe UI", 10F);
+        iterationsCount.Location = new Point(449, 141);
+        iterationsCount.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+        iterationsCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+        iterationsCount.Name = "iterationsCount";
+        iterationsCount.Size = new Size(60, 25);
+        iterationsCount.TabIndex = 4;
+        iterationsCount.Value = new decimal(new int[] { 1, 0, 0, 0 });
         // 
-        // label2
+        // showPasskeyCheckbox
         // 
-        label2.AutoSize = true;
-        label2.Location = new Point(75, 210);
-        label2.Name = "label2";
-        label2.Size = new Size(87, 15);
-        label2.TabIndex = 12;
-        label2.Text = "Your password:";
+        showPasskeyCheckbox.AutoSize = true;
+        showPasskeyCheckbox.Location = new Point(75, 172);
+        showPasskeyCheckbox.Name = "showPasskeyCheckbox";
+        showPasskeyCheckbox.Size = new Size(99, 19);
+        showPasskeyCheckbox.TabIndex = 5;
+        showPasskeyCheckbox.Text = "Show passkey";
+        showPasskeyCheckbox.UseVisualStyleBackColor = true;
+        showPasskeyCheckbox.CheckedChanged += ShowPasskeyCheckbox_CheckedChanged;
+        // 
+        // label3Result
+        // 
+        label3Result.AutoSize = true;
+        label3Result.Location = new Point(75, 210);
+        label3Result.Name = "label3Result";
+        label3Result.Size = new Size(87, 15);
+        label3Result.TabIndex = 6;
+        label3Result.Text = "Your password:";
         // 
         // result
         // 
@@ -118,36 +129,67 @@ partial class MainForm
         result.Name = "result";
         result.ReadOnly = true;
         result.Size = new Size(290, 25);
-        result.TabIndex = 11;
-        result.TabStop = false;
+        result.TabIndex = 7;
         result.TextAlign = HorizontalAlignment.Center;
         result.UseSystemPasswordChar = true;
         // 
-        // copyright
+        // label4Entropy
         // 
-        copyright.AutoSize = true;
-        copyright.Location = new Point(468, 392);
-        copyright.Name = "copyright";
-        copyright.Size = new Size(104, 30);
-        copyright.TabIndex = 10;
-        copyright.Text = "MIT License\r\n© 2024 Piotr Kniaz";
-        copyright.TextAlign = ContentAlignment.TopRight;
+        label4Entropy.AutoSize = true;
+        label4Entropy.Location = new Point(255, 210);
+        label4Entropy.Name = "label4Entropy";
+        label4Entropy.Size = new Size(51, 15);
+        label4Entropy.TabIndex = 8;
+        label4Entropy.Text = "Entropy:";
+        label4Entropy.Visible = false;
         // 
-        // version
+        // entropyCount
         // 
-        version.AutoSize = true;
-        version.Location = new Point(12, 407);
-        version.Name = "version";
-        version.Size = new Size(87, 15);
-        version.TabIndex = 9;
-        version.Text = "version 1.3.0-rc";
+        entropyCount.AutoSize = true;
+        entropyCount.Location = new Point(304, 210);
+        entropyCount.Name = "entropyCount";
+        entropyCount.Size = new Size(0, 15);
+        entropyCount.TabIndex = 9;
+        // 
+        // copyButton
+        // 
+        copyButton.Enabled = false;
+        copyButton.Location = new Point(379, 228);
+        copyButton.Name = "copyButton";
+        copyButton.Size = new Size(130, 25);
+        copyButton.TabIndex = 10;
+        copyButton.Text = "Copy to clipboard";
+        copyButton.UseVisualStyleBackColor = true;
+        copyButton.Click += CopyButton_Click;
+        // 
+        // showPasswordCheckbox
+        // 
+        showPasswordCheckbox.AutoSize = true;
+        showPasswordCheckbox.Location = new Point(75, 259);
+        showPasswordCheckbox.Name = "showPasswordCheckbox";
+        showPasswordCheckbox.Size = new Size(108, 19);
+        showPasswordCheckbox.TabIndex = 11;
+        showPasswordCheckbox.Text = "Show password";
+        showPasswordCheckbox.UseVisualStyleBackColor = true;
+        showPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
+        // 
+        // calculateButton
+        // 
+        calculateButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+        calculateButton.Location = new Point(219, 291);
+        calculateButton.Name = "calculateButton";
+        calculateButton.Size = new Size(146, 53);
+        calculateButton.TabIndex = 12;
+        calculateButton.Text = "Calculate";
+        calculateButton.UseVisualStyleBackColor = true;
+        calculateButton.Click += CalculateButton_Click;
         // 
         // clearButton
         // 
         clearButton.Location = new Point(219, 361);
         clearButton.Name = "clearButton";
         clearButton.Size = new Size(146, 30);
-        clearButton.TabIndex = 7;
+        clearButton.TabIndex = 13;
         clearButton.Text = "Clear";
         clearButton.UseCompatibleTextRendering = true;
         clearButton.UseVisualStyleBackColor = true;
@@ -159,69 +201,46 @@ partial class MainForm
         linkGitHub.Location = new Point(12, 392);
         linkGitHub.Name = "linkGitHub";
         linkGitHub.Size = new Size(45, 15);
-        linkGitHub.TabIndex = 8;
-        linkGitHub.TabStop = true;
+        linkGitHub.TabIndex = 14;
         linkGitHub.Text = "GitHub";
         linkGitHub.LinkClicked += LinkGitHub_LinkClicked;
         // 
-        // iterationsCount
+        // version
         // 
-        iterationsCount.Font = new Font("Segoe UI", 10F);
-        iterationsCount.Location = new Point(449, 141);
-        iterationsCount.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
-        iterationsCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-        iterationsCount.Name = "iterationsCount";
-        iterationsCount.Size = new Size(60, 25);
-        iterationsCount.TabIndex = 1;
-        iterationsCount.Value = new decimal(new int[] { 1, 0, 0, 0 });
+        version.AutoSize = true;
+        version.Location = new Point(12, 407);
+        version.Name = "version";
+        version.Size = new Size(87, 15);
+        version.TabIndex = 15;
+        version.Text = "version 1.3.0-rc";
         // 
-        // label3
+        // copyright
         // 
-        label3.AutoSize = true;
-        label3.Location = new Point(449, 123);
-        label3.Name = "label3";
-        label3.Size = new Size(59, 15);
-        label3.TabIndex = 6;
-        label3.Text = "Iterations:";
-        // 
-        // showPasswordCheckbox
-        // 
-        showPasswordCheckbox.AutoSize = true;
-        showPasswordCheckbox.Location = new Point(75, 259);
-        showPasswordCheckbox.Name = "showPasswordCheckbox";
-        showPasswordCheckbox.Size = new Size(108, 19);
-        showPasswordCheckbox.TabIndex = 5;
-        showPasswordCheckbox.Text = "Show password";
-        showPasswordCheckbox.UseVisualStyleBackColor = true;
-        showPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
-        // 
-        // logo
-        // 
-        logo.ErrorImage = null;
-        logo.Image = (Image)resources.GetObject("logo.Image");
-        logo.InitialImage = null;
-        logo.Location = new Point(142, 10);
-        logo.Name = "logo";
-        logo.Size = new Size(300, 110);
-        logo.SizeMode = PictureBoxSizeMode.Zoom;
-        logo.TabIndex = 14;
-        logo.TabStop = false;
+        copyright.AutoSize = true;
+        copyright.Location = new Point(468, 392);
+        copyright.Name = "copyright";
+        copyright.Size = new Size(104, 30);
+        copyright.TabIndex = 16;
+        copyright.Text = "MIT License\r\n© 2024 Piotr Kniaz";
+        copyright.TextAlign = ContentAlignment.TopRight;
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(96F, 96F);
         AutoScaleMode = AutoScaleMode.Dpi;
         ClientSize = new Size(584, 431);
+        Controls.Add(entropyCount);
+        Controls.Add(label4Entropy);
         Controls.Add(showPasswordCheckbox);
-        Controls.Add(label3);
+        Controls.Add(label2Iterations);
         Controls.Add(iterationsCount);
         Controls.Add(linkGitHub);
         Controls.Add(clearButton);
         Controls.Add(version);
         Controls.Add(copyright);
         Controls.Add(result);
-        Controls.Add(label2);
-        Controls.Add(label1);
+        Controls.Add(label3Result);
+        Controls.Add(label1Input);
         Controls.Add(input);
         Controls.Add(copyButton);
         Controls.Add(calculateButton);
@@ -245,15 +264,17 @@ partial class MainForm
     private Button calculateButton;
     private Button copyButton;
     private TextBox input;
-    private Label label1;
-    private Label label2;
+    private Label label1Input;
+    private Label label3Result;
     private TextBox result;
     private Label copyright;
     private Label version;
     private Button clearButton;
     private LinkLabel linkGitHub;
     private NumericUpDown iterationsCount;
-    private Label label3;
+    private Label label2Iterations;
     private CheckBox showPasswordCheckbox;
     private PictureBox logo;
+    private Label label4Entropy;
+    private Label entropyCount;
 }

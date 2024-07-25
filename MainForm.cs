@@ -32,8 +32,18 @@ public partial class MainForm : Form
         result.Text = temp.ToString();
         input.Focus();
 
+        label4Entropy.Visible = true;
+        entropyCount.Text = $"{CalculateEntropy(temp):f2} bits";
+
         copyButton.Text = "Copy to clipboard";
         copyButton.Enabled = true;
+    }
+
+    private static double CalculateEntropy(StringBuilder password)
+    {
+        HashSet<char> uniqueCharacters = new(password.ToString());
+
+        return password.Length * Math.Log2(uniqueCharacters.Count);
     }
 
     #region Main GUI features
@@ -42,7 +52,7 @@ public partial class MainForm : Form
 
     private void ClearButton_Click(object? sender, EventArgs e) => ClearTextBoxes();
 
-        private void CopyButton_Click(object sender, EventArgs e)
+    private void CopyButton_Click(object sender, EventArgs e)
     {
         if (result.Text.Length > 0)
         {
@@ -139,6 +149,8 @@ public partial class MainForm : Form
         result.Text = string.Empty;
         iterationsCount.Value = 1;
         copyButton.Enabled = false;
+        label4Entropy.Visible = false;
+        entropyCount.Text = "";
         input.Focus();
     }
 
@@ -148,7 +160,7 @@ public partial class MainForm : Form
             Clipboard.Clear();
         clipboardTimer.Stop();
 
-        copyButton.Text = "Copy to clipboard";
+        copyButton.Text = "Clipboard cleared";
     }
 
     private void TextBoxesAutoClearProcessor(object? sender, EventArgs e) => ClearTextBoxes();
