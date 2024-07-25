@@ -125,11 +125,11 @@ partial class MainForm
         // copyright
         // 
         copyright.AutoSize = true;
-        copyright.Location = new Point(439, 407);
+        copyright.Location = new Point(468, 392);
         copyright.Name = "copyright";
-        copyright.Size = new Size(133, 15);
+        copyright.Size = new Size(104, 30);
         copyright.TabIndex = 10;
-        copyright.Text = "© 2023-2024 Piotr Kniaz";
+        copyright.Text = "MIT License\r\n© 2024 Piotr Kniaz";
         copyright.TextAlign = ContentAlignment.TopRight;
         // 
         // version
