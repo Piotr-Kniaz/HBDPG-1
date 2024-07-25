@@ -2,6 +2,10 @@
 
 Lenguages: [English](#English) | [Русский](#Русский)
 
+<p align="center">
+  <img src="Pictures/SocialPreview.png" alt="Project Logo"/>
+</p>
+
 # English
 
 > **Project "HBSPC-1" has been renamed to "HBDPG-1".**
@@ -11,6 +15,10 @@ Lenguages: [English](#English) | [Русский](#Русский)
 * [Risks and Recommendations](#Risks-and-Recommendations)
 
 ## About
+
+<p align="center">
+  <img src="Pictures/Screenshot1.png" alt="Screenshot"/>
+</p>
 
 **HBDPG-1** *(Hashing-based Deterministic Password Generator – 1st Gen)* is a hashing-based algorithm for deterministic password generation using user's passkey (passphrase).
 This algorithm is designed to solve the problem of creating, remembering and storing strong passwords.
@@ -63,6 +71,10 @@ To avoid password compromise, **do not use too short and simple passkeys!** To c
 * [Риски и Рекомендации](#Риски-и-Рекомендации)
 
 ## Описание
+
+<p align="center">
+  <img src="Pictures/Screenshot1.png" alt="Screenshot"/>
+</p>
 
 **HBDPG-1** *(Hashing-based Deterministic Password Generator – 1st Gen)* — это алгоритм для детерминированной генерации паролей на основе пользовательского ключа (фразы).
 Данный алгоритм призван решить проблему создания, запоминания и хранения сложных паролей.
