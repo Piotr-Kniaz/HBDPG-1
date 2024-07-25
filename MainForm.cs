@@ -31,6 +31,9 @@ public partial class MainForm : Form
 
         result.Text = temp.ToString();
         input.Focus();
+
+        copyButton.Text = "Copy to clipboard";
+        copyButton.Enabled = true;
     }
 
     #region Main GUI features
@@ -39,18 +42,14 @@ public partial class MainForm : Form
 
     private void ClearButton_Click(object? sender, EventArgs e) => ClearTextBoxes();
 
-    private void CopyButton_Click(object sender, EventArgs e)
+        private void CopyButton_Click(object sender, EventArgs e)
     {
         if (result.Text.Length > 0)
         {
             Clipboard.SetText(result.Text);
             clipboardTimer.Reset();
 
-            MessageBox.Show(
-                "Password copied to clipboard.\n\nClipboard will be automatically cleared in 60 seconds or immediately after closing the app.",
-                "Information",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            copyButton.Text = "Password copied";
         }
 
         input.Focus();
@@ -66,15 +65,6 @@ public partial class MainForm : Form
     {
         result.UseSystemPasswordChar = !showPasswordCheckbox.Checked;
         input.Focus();
-    }
-
-    private void Logo_Click(object sender, EventArgs e)
-    {
-        MessageBox.Show(
-            "Project \"HBSPC-1\" has been renamed to \"HBDPG-1\"",
-            "Note",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
     }
 
     private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -148,6 +138,7 @@ public partial class MainForm : Form
         input.Text = string.Empty;
         result.Text = string.Empty;
         iterationsCount.Value = 1;
+        copyButton.Enabled = false;
         input.Focus();
     }
 
@@ -156,6 +147,8 @@ public partial class MainForm : Form
         if (Clipboard.GetText().ToString().Length == 32)
             Clipboard.Clear();
         clipboardTimer.Stop();
+
+        copyButton.Text = "Copy to clipboard";
     }
 
     private void TextBoxesAutoClearProcessor(object? sender, EventArgs e) => ClearTextBoxes();

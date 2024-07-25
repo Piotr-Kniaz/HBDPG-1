@@ -51,7 +51,7 @@ partial class MainForm
         // showPasskeyCheckbox
         // 
         showPasskeyCheckbox.AutoSize = true;
-        showPasskeyCheckbox.Location = new Point(75, 169);
+        showPasskeyCheckbox.Location = new Point(75, 172);
         showPasskeyCheckbox.Name = "showPasskeyCheckbox";
         showPasskeyCheckbox.Size = new Size(99, 19);
         showPasskeyCheckbox.TabIndex = 2;
@@ -62,7 +62,7 @@ partial class MainForm
         // calculateButton
         // 
         calculateButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-        calculateButton.Location = new Point(219, 288);
+        calculateButton.Location = new Point(219, 291);
         calculateButton.Name = "calculateButton";
         calculateButton.Size = new Size(146, 53);
         calculateButton.TabIndex = 6;
@@ -72,7 +72,8 @@ partial class MainForm
         // 
         // copyButton
         // 
-        copyButton.Location = new Point(379, 225);
+        copyButton.Enabled = false;
+        copyButton.Location = new Point(379, 228);
         copyButton.Name = "copyButton";
         copyButton.Size = new Size(130, 25);
         copyButton.TabIndex = 4;
@@ -83,7 +84,7 @@ partial class MainForm
         // input
         // 
         input.Font = new Font("Consolas", 11F);
-        input.Location = new Point(75, 138);
+        input.Location = new Point(75, 141);
         input.Name = "input";
         input.Size = new Size(360, 25);
         input.TabIndex = 0;
@@ -93,7 +94,7 @@ partial class MainForm
         // label1
         // 
         label1.AutoSize = true;
-        label1.Location = new Point(75, 120);
+        label1.Location = new Point(75, 123);
         label1.Name = "label1";
         label1.Size = new Size(51, 15);
         label1.TabIndex = 13;
@@ -102,7 +103,7 @@ partial class MainForm
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(75, 207);
+        label2.Location = new Point(75, 210);
         label2.Name = "label2";
         label2.Size = new Size(87, 15);
         label2.TabIndex = 12;
@@ -112,7 +113,7 @@ partial class MainForm
         // 
         result.Enabled = false;
         result.Font = new Font("Consolas", 11F);
-        result.Location = new Point(75, 225);
+        result.Location = new Point(75, 228);
         result.MaxLength = 32;
         result.Name = "result";
         result.ReadOnly = true;
@@ -143,7 +144,7 @@ partial class MainForm
         // 
         // clearButton
         // 
-        clearButton.Location = new Point(219, 358);
+        clearButton.Location = new Point(219, 361);
         clearButton.Name = "clearButton";
         clearButton.Size = new Size(146, 30);
         clearButton.TabIndex = 7;
@@ -166,7 +167,7 @@ partial class MainForm
         // iterationsCount
         // 
         iterationsCount.Font = new Font("Segoe UI", 10F);
-        iterationsCount.Location = new Point(449, 138);
+        iterationsCount.Location = new Point(449, 141);
         iterationsCount.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
         iterationsCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
         iterationsCount.Name = "iterationsCount";
@@ -177,7 +178,7 @@ partial class MainForm
         // label3
         // 
         label3.AutoSize = true;
-        label3.Location = new Point(449, 120);
+        label3.Location = new Point(449, 123);
         label3.Name = "label3";
         label3.Size = new Size(59, 15);
         label3.TabIndex = 6;
@@ -186,7 +187,7 @@ partial class MainForm
         // showPasswordCheckbox
         // 
         showPasswordCheckbox.AutoSize = true;
-        showPasswordCheckbox.Location = new Point(75, 256);
+        showPasswordCheckbox.Location = new Point(75, 259);
         showPasswordCheckbox.Name = "showPasswordCheckbox";
         showPasswordCheckbox.Size = new Size(108, 19);
         showPasswordCheckbox.TabIndex = 5;
@@ -196,22 +197,21 @@ partial class MainForm
         // 
         // logo
         // 
-        logo.Cursor = Cursors.Hand;
+        logo.ErrorImage = null;
         logo.Image = (Image)resources.GetObject("logo.Image");
-        logo.Location = new Point(242, 10);
+        logo.InitialImage = null;
+        logo.Location = new Point(142, 10);
         logo.Name = "logo";
-        logo.Size = new Size(100, 100);
+        logo.Size = new Size(300, 110);
         logo.SizeMode = PictureBoxSizeMode.Zoom;
-        logo.TabIndex = 0;
+        logo.TabIndex = 14;
         logo.TabStop = false;
-        logo.Click += Logo_Click;
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(96F, 96F);
         AutoScaleMode = AutoScaleMode.Dpi;
         ClientSize = new Size(584, 431);
-        Controls.Add(logo);
         Controls.Add(showPasswordCheckbox);
         Controls.Add(label3);
         Controls.Add(iterationsCount);
@@ -226,6 +226,7 @@ partial class MainForm
         Controls.Add(copyButton);
         Controls.Add(calculateButton);
         Controls.Add(showPasskeyCheckbox);
+        Controls.Add(logo);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
         Name = "MainForm";
