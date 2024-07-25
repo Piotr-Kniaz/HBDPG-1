@@ -1,6 +1,6 @@
-﻿namespace HBSPC_1_WindowsApp;
+﻿namespace HBDPG_1_WindowsApp;
 
-public static class HBSPC_1
+public static class HBDPG_1
 {
     private static readonly MD5 md5 = MD5.Create();
     private static readonly SHA256 sha256 = SHA256.Create();
@@ -9,7 +9,7 @@ public static class HBSPC_1
                                               { '.', ',', '|', '?', '\\', ';', ':', '"', '\'', '(', ']', '}', '+', '_', '>', '^', '$', '!', '~' } };
 
     /// <summary>
-    /// Pers HBSPG-1 algorithm.
+    /// Pers HBDPG-1 algorithm.
     /// </summary>
     /// <param name="passkey">Passkey to calculate.</param>
     /// <returns>Calculated password.</returns>

@@ -1,4 +1,4 @@
-namespace HBSPC_1_WindowsApp;
+namespace HBDPG_1_WindowsApp;
 
 public partial class MainForm : Form
 {
@@ -15,7 +15,8 @@ public partial class MainForm : Form
         input.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         iterationsCount.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
         showPasskeyCheckbox.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
-        
+        showPasswordCheckbox.KeyDown += new KeyEventHandler(KeyDown_EventProcessor);
+
         FormClosed += new FormClosedEventHandler(Form_Closed);
     }
 
@@ -25,16 +26,29 @@ public partial class MainForm : Form
         int iterations = (int)iterationsCount.Value;
 
         do
-            temp = HBSPC_1.CalculatePassword(temp);
+            temp = HBDPG_1.CalculatePassword(temp);
         while (--iterations > 0);
 
         result.Text = temp.ToString();
         input.Focus();
+
+        label4Entropy.Visible = true;
+        entropyCount.Text = $"{CalculateEntropy(temp):f2} bits";
+
+        copyButton.Text = "Copy to clipboard";
+        copyButton.Enabled = true;
+    }
+
+    private static double CalculateEntropy(StringBuilder password)
+    {
+        HashSet<char> uniqueCharacters = new(password.ToString());
+
+        return password.Length * Math.Log2(uniqueCharacters.Count);
     }
 
     #region Main GUI features
 
-    private void CalculateButton_Click(object sender, EventArgs e) => Calculate();
+    private void GenerateButton_Click(object sender, EventArgs e) => Calculate();
 
     private void ClearButton_Click(object? sender, EventArgs e) => ClearTextBoxes();
 
@@ -43,10 +57,12 @@ public partial class MainForm : Form
         if (result.Text.Length > 0)
         {
             Clipboard.SetText(result.Text);
-            result.Focus();
-            result.SelectAll();
             clipboardTimer.Reset();
+
+            copyButton.Text = "Password copied";
         }
+
+        input.Focus();
     }
 
     private void ShowPasskeyCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -55,10 +71,28 @@ public partial class MainForm : Form
         input.Focus();
     }
 
+    private void ShowPasswordCheckbox_CheckedChanged(object sender, EventArgs e)
+    {
+        result.UseSystemPasswordChar = !showPasswordCheckbox.Checked;
+        input.Focus();
+    }
+
     private void LinkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {
-        try { System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBSPC-1"); }
-        catch { MessageBox.Show("Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBSPC-1", "OOPS!"); }
+        try
+        {
+            System.Diagnostics.Process.Start("explorer", "https://github.com/Piotr-Kniaz/HBDPG-1");
+        }
+        catch
+        {
+            MessageBox.Show(
+                "Unable to open link.\n\nProject repo: https://github.com/Piotr-Kniaz/HBDPG-1",
+                "OOPS!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+
+        input.Focus();
     }
 
     #endregion
@@ -67,11 +101,11 @@ public partial class MainForm : Form
 
     private void KeyDown_EventProcessor(object? sender, KeyEventArgs e)
     {
-        // Only for CheckBox.
-        if (sender is CheckBox && e.KeyCode == Keys.Enter)
+        // Only for CheckBoxes.
+        if (sender is CheckBox c && e.KeyCode == Keys.Enter)
         {
             e.SuppressKeyPress = true;
-            showPasskeyCheckbox.Checked = !showPasskeyCheckbox.Checked;
+            c.Checked = !c.Checked;
             return;
         }
 
@@ -105,8 +139,6 @@ public partial class MainForm : Form
 
     private void Input_DoubleClick(object sender, EventArgs e) => input.SelectAll();
 
-    private void Result_Click(object sender, EventArgs e) => result.SelectAll();
-
     #endregion
 
     #region Security features
@@ -116,6 +148,9 @@ public partial class MainForm : Form
         input.Text = string.Empty;
         result.Text = string.Empty;
         iterationsCount.Value = 1;
+        copyButton.Enabled = false;
+        label4Entropy.Visible = false;
+        entropyCount.Text = "";
         input.Focus();
     }
 
@@ -124,6 +159,8 @@ public partial class MainForm : Form
         if (Clipboard.GetText().ToString().Length == 32)
             Clipboard.Clear();
         clipboardTimer.Stop();
+
+        copyButton.Text = "Clipboard cleared";
     }
 
     private void TextBoxesAutoClearProcessor(object? sender, EventArgs e) => ClearTextBoxes();

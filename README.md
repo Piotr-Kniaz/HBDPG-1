@@ -1,8 +1,14 @@
-# HBSPC-1
+# HBDPG-1 for Windows
 
 Lenguages: [English](#English) | [Русский](#Русский)
 
+<p align="center">
+  <img src="Pictures/SocialPreview.png" alt="Project Logo"/>
+</p>
+
 # English
+
+> **Project "HBSPC-1" has been renamed to "HBDPG-1".**
 
 **Table of contents:**
 * [About](#About)
@@ -10,12 +16,16 @@ Lenguages: [English](#English) | [Русский](#Русский)
 
 ## About
 
-**HBSPC-1** *(Hashing-based Secure Password Calculation 1st Gen)* is a hashing-based algorithm for deterministic generation of secure passwords using user passkeys.
+<p align="center">
+  <img src="Pictures/Screenshot1.png" alt="Screenshot"/>
+</p>
+
+**HBDPG-1** *(Hashing-based Deterministic Password Generator – 1st Gen)* is a hashing-based algorithm for deterministic password generation using user's passkey (passphrase).
 This algorithm is designed to solve the problem of creating, remembering and storing strong passwords.
 
 The user doesn't need to remember or save a password, it is enough for him to remember the passkey (phrase), which can be quite simple. 
 The passkey can be a string of any length. The algorithm calculates a secure password 32 characters long that contains upper and lower 
-case letters (A-F), numbers (0-9), symbols.
+case letters (A-F), numbers (0-9) and symbols.
 
 Example:
 
@@ -43,16 +53,18 @@ Example:
 
 ## Risks and Recommendations
 
-The main risk of using HBSPC-1 is the possibility for an attacker to enumerate simple and popular passkeys and calculate passwords. 
-To avoid password compromise, **do not use too short and simple passkeys!**
+The main risk of using HBDPG-1 is the possibility for an attacker to enumerate simple and popular passkeys and calculate passwords. 
+To avoid password compromise, **do not use too short and simple passkeys!** To complicate the brute force you can set a **larger number of iterations**, the available values: 1 – 99,999. The set number of iterations affects the result (generated password)!
 
 **Do not store passkeys in plain text!** If there is a need to save the passkey, use encryption (for example, AES).
 
 **Do not use identical passkeys** for passwords from different services (accounts)!
 
-**Use 2-Step Verification** on all services if possible!
+**Use 2FA** on all services if possible!
 
 # Русский
+
+> **Проект "HBSPC-1" был переименован в "HBDPG-1".**
 
 **Содержание:**
 * [Описание](#Описание)
@@ -60,12 +72,16 @@ To avoid password compromise, **do not use too short and simple passkeys!**
 
 ## Описание
 
-**HBSPC-1** *(Hashing-based Secure Password Calculation 1st Gen)* — это алгоритм для детерминированной генерации паролей на основе пользовательских ключей.
+<p align="center">
+  <img src="Pictures/Screenshot1.png" alt="Screenshot"/>
+</p>
+
+**HBDPG-1** *(Hashing-based Deterministic Password Generator – 1st Gen)* — это алгоритм для детерминированной генерации паролей на основе пользовательского ключа (фразы).
 Данный алгоритм призван решить проблему создания, запоминания и хранения сложных паролей.
 
 Пользователю не нужно запоминать или сохранять где-либо сложный пароль, ему достаточно запомнить ключ (фразу), который может быть довольно простым. 
 Ключом может служить строка произвольной длины. Алгоритм вычисляет из ключа безопасный 32-значный пароль, который содержит буквы верхнего и нижнего 
-регистра (A-F), цифры (0-9), спецсимволы.
+регистра (A-F), цифры (0-9) и спецсимволы.
 
 Пример:
 
@@ -93,8 +109,8 @@ To avoid password compromise, **do not use too short and simple passkeys!**
 
 ## Риски и Рекомендации
 
-Основным риском использования HBSPC-1 является возможность перебора злоумышленником простых и популярных ключей и вычисление из них соответствующих паролей. 
-Во избежание компрометации пароля **не используйте слишком короткие и простые ключи!**
+Основным риском использования HBDPG-1 является возможность перебора злоумышленником простых и популярных ключей и вычисление из них соответствующих паролей. 
+Во избежание компрометации пароля **не используйте слишком короткие и простые ключи!** Для усложнения перебора можете **установить большее количество итераций**, доступные значения: 1 – 99,999. Установленное количество итераций влияет на результат (сгенерированный пароль)!
 
 **Не храните ключи в открытом виде!** Если есть необходимость сохранить ключ, используйте шифрование (например, AES).
 
