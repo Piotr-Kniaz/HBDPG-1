@@ -2,11 +2,17 @@
 
 Lenguages: [English](#English) | [Русский](#Русский)
 
-[<p align="center"><img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="600px"></p>](https://github.com/Piotr-Kniaz/HBDPG-2)
+<p align="center"><img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="600px"></p>
 
-<p align="center">
-  <img src="Pictures/SocialPreview.png" alt="Project Logo"/>
-</p>
+**Support  for this project will be discontinued soon!** Try the **NEXT GEN** of deterministic password generator!
+
+[<p align="center"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></p>](https://piotr-kniaz.github.io/HBDPG-2/)
+
+**HBDPG-2** is a more secure, cross-platform deterministic password generator. [Learn more about HBDPG-2](https://github.com/Piotr-Kniaz/HBDPG-2)
+
+---
+
+<p align="center"><img src="Pictures/SocialPreview.png" alt="Project Logo"/></p>
 
 # English
 
@@ -18,9 +24,7 @@ Lenguages: [English](#English) | [Русский](#Русский)
 
 ## About
 
-<p align="center">
-  <img src="Pictures/Screenshot1.png" alt="Screenshot"/>
-</p>
+<p align="center"><img src="Pictures/Screenshot1.png" alt="Screenshot"/></p>
 
 **HBDPG-1** *(Hashing-based Deterministic Password Generator – 1st Gen)* is a hashing-based algorithm for deterministic password generation using user's passkey (passphrase).
 This algorithm is designed to solve the problem of creating, remembering and storing strong passwords.
@@ -74,9 +78,7 @@ To avoid password compromise, **do not use too short and simple passkeys!** To c
 
 ## Описание
 
-<p align="center">
-  <img src="Pictures/Screenshot1.png" alt="Screenshot"/>
-</p>
+<p align="center"><img src="Pictures/Screenshot1.png" alt="Screenshot"/></p>
 
 **HBDPG-1** *(Hashing-based Deterministic Password Generator – 1st Gen)* — это алгоритм для детерминированной генерации паролей на основе пользовательского ключа (фразы).
 Данный алгоритм призван решить проблему создания, запоминания и хранения сложных паролей.
