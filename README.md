@@ -2,6 +2,8 @@
 
 Lenguages: [English](#English) | [Русский](#Русский)
 
+[<img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="600px" style="display: block; margin-left: auto; margin-right: auto;">](https://github.com/Piotr-Kniaz/HBDPG-2)
+
 <p align="center">
   <img src="Pictures/SocialPreview.png" alt="Project Logo"/>
 </p>
