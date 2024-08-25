@@ -2,11 +2,11 @@
 
 Lenguages: [English](#English) | [Русский](#Русский)
 
-<p align="center"><img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="600px"></p>
+<p align="center"><img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="500px"></p>
 
 **Support  for this project will be discontinued soon!** Try the **NEXT GEN** of deterministic password generator!
 
-[<p align="center"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></p>](https://piotr-kniaz.github.io/HBDPG-2/)
+<p align="center"><a href="https://piotr-kniaz.github.io/HBDPG-2/"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></a></p>
 
 **HBDPG-2** is a more secure, cross-platform deterministic password generator. [Learn more about HBDPG-2](https://github.com/Piotr-Kniaz/HBDPG-2)
 
