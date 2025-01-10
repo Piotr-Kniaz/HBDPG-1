@@ -4,21 +4,29 @@ Lenguages: [English](#English) | [Русский](#Русский)
 
 <p align="center"><img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="500px"></p>
 
-**Support  for this project will be discontinued soon!** Try the **NEXT GEN** of deterministic password generator!
-
-<p align="center"><a href="https://piotr-kniaz.github.io/HBDPG-2/"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></a></p>
-
-**HBDPG-2** is a more secure, cross-platform deterministic password generator. [Learn more about HBDPG-2](https://github.com/Piotr-Kniaz/HBDPG-2)
-
 ---
 
 <p align="center"><img src="Pictures/SocialPreview.png" alt="Project Logo"/></p>
 
 # English
 
-> **Project "HBSPC-1" has been renamed to "HBDPG-1".**
+> Project **"HBSPC-1"** has been renamed to **"HBDPG-1"**.
 
-**Table of contents:**
+---
+
+> [!CAUTION]
+> **Do not use HBDPG-1!**
+> It is <ins>not secure enough</ins>!
+
+This project is **no longer supported!** Try the **NEXT GEN** of deterministic password generator!
+
+<p align="center"><a href="https://hbdpg-2.github.io"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></a></p>
+
+**HBDPG-2** is a more secure, cross-platform deterministic password generator. [Learn more about HBDPG-2](https://github.com/HBDPG-2/hbdpg-2.github.io)
+
+---
+
+### Contents:
 * [About](#About)
 * [Risks and Recommendations](#Risks-and-Recommendations)
 
@@ -43,7 +51,8 @@ Example:
 | bob        | `d19d>378ec\c0Eae]7f1ce\306d5^868` |
 | 01.01.1970 | `0F85"B8D4/a951_680a/3CdE^Ad27=e7` |
 
-> **WARNING!** Do not use very simple passkeys!
+> [!WARNING]
+> **Do not use very simple passkeys!**
 
 The algorithm has an avalanche effect due to which even a slight change in the passkey can completely change the result.
 
@@ -70,9 +79,23 @@ To avoid password compromise, **do not use too short and simple passkeys!** To c
 
 # Русский
 
-> **Проект "HBSPC-1" был переименован в "HBDPG-1".**
+> Проект **"HBSPC-1"** был переименован в **"HBDPG-1"**.
 
-**Содержание:**
+---
+
+> [!CAUTION]
+> **Не используйте HBDPG-1!**
+> Он <ins>недостаточно безопасен</ins>!
+
+Этот проект **больше не поддерживается!** Попробуйте **СЛЕДУЮЩЕЕ ПОКОЛЕНИЕ** детерминированного генератора паролей!
+
+<p align="center"><a href="https://hbdpg-2.github.io"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></a></p>
+
+**HBDPG-2** — это более безопасный, кроссплатформенный детерминированный генератор паролей. [Узнать больше о HBDPG-2](https://github.com/HBDPG-2/hbdpg-2.github.io)
+
+---
+
+### Содержание:
 * [Описание](#Описание)
 * [Риски и Рекомендации](#Риски-и-Рекомендации)
 
@@ -97,7 +120,8 @@ To avoid password compromise, **do not use too short and simple passkeys!** To c
 | bob        | `d19d>378ec\c0Eae]7f1ce\306d5^868` |
 | 01.01.1970 | `0F85"B8D4/a951_680a/3CdE^Ad27=e7` |
 
-> **ВНИМАНИЕ!** Не используйте слишком простые ключи!
+> [!WARNING]
+> **Не используйте слишком простые ключи!**
 
 Алгоритм обладает лавинным эффектом, благодаря чему даже незначительное изменение ключа способно полностью изменить результат.
 
