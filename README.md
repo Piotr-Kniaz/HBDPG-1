@@ -2,10 +2,6 @@
 
 Lenguages: [English](#English) | [Русский](#Русский)
 
-<p align="center"><img src="Pictures/Warning.png" alt="HBDPG-1 is not secure enough!" width="500px"></p>
-
----
-
 <p align="center"><img src="Pictures/SocialPreview.png" alt="Project Logo"/></p>
 
 # English
@@ -20,7 +16,7 @@ Lenguages: [English](#English) | [Русский](#Русский)
 
 This project is **no longer supported!** Try the **NEXT GEN** of deterministic password generator!
 
-<p align="center"><a href="https://hbdpg-2.github.io"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></a></p>
+<p align="center"><a href="https://hbdpg-2.github.io"><img src="Pictures/TryButton-en.webp" alt="Try HBDPG-2 now!" width="294px"></a></p>
 
 **HBDPG-2** is a more secure, cross-platform deterministic password generator. [Learn more about HBDPG-2](https://github.com/HBDPG-2/hbdpg-2.github.io)
 
@@ -89,7 +85,7 @@ To avoid password compromise, **do not use too short and simple passkeys!** To c
 
 Этот проект **больше не поддерживается!** Попробуйте **СЛЕДУЮЩЕЕ ПОКОЛЕНИЕ** детерминированного генератора паролей!
 
-<p align="center"><a href="https://hbdpg-2.github.io"><img src="Pictures/TryButton.png" alt="Try HBDPG-2 now!" width="300px"></a></p>
+<p align="center"><a href="https://hbdpg-2.github.io"><img src="Pictures/TryButton-ru.webp" alt="Попробовать HBDPG-2!" width="339px"></a></p>
 
 **HBDPG-2** — это более безопасный, кроссплатформенный детерминированный генератор паролей. [Узнать больше о HBDPG-2](https://github.com/HBDPG-2/hbdpg-2.github.io)
 
